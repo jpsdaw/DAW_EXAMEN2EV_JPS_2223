@@ -51,18 +51,18 @@ namespace LotoClassNS
         /// <summary>
         /// Constructor al que se le pasa una combinación de números
         /// </summary>
-        /// <param name="misnums">misnums es un array de enteros con la combinación 
+        /// <param name="misNums">misnums es un array de enteros con la combinación 
         /// que quiero crear (no tiene porqué ser válida)</param>
-        public Loteria(int[] misnums)  // misnumeros: combinación con la que queremos inicializar la clase
+        public Loteria(int[] misNums)  // misnumeros: combinación con la que queremos inicializar la clase
         {
             for (int i = 0; i < MAX_NUMEROS; i++)
-                if (misnums[i]>=NUMERO_MENOR && misnums[i]<=NUMERO_MAYOR) {
+                if (misNums[i]>=NUMERO_MENOR && misNums[i]<=NUMERO_MAYOR) {
                     int j;
                     for (j=0; j<i; j++) 
-                        if (misnums[i]==Nums[j])
+                        if (misNums[i]==Nums[j])
                             break;
                     if (i==j)
-                        Nums[i]=misnums[i]; // validamos la combinación
+                        Nums[i]=misNums[i]; // validamos la combinación
                     else {
                         CombinacionValida = false;
                         return;
