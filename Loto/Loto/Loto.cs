@@ -21,7 +21,7 @@ namespace LotoClassNS
 
 
         /// <summary>
-        /// Si el constructor está vacio, se genera una combinación aleatoria correcta
+        /// Constructor vacio, se genera una combinación aleatoria correcta
         /// </summary>
         public Loteria()
         {
@@ -55,7 +55,7 @@ namespace LotoClassNS
         /// que quiero crear (no tiene porqué ser válida)</param>
         public Loteria(int[] misnums)  // misnumeros: combinación con la que queremos inicializar la clase
         {
-            for (int i=0; i<MAX_NUMEROS; i++)
+            for (int i = 0; i < MAX_NUMEROS; i++)
                 if (misnums[i]>=NUMERO_MENOR && misnums[i]<=NUMERO_MAYOR) {
                     int j;
                     for (j=0; j<i; j++) 
@@ -64,16 +64,16 @@ namespace LotoClassNS
                     if (i==j)
                         Nums[i]=misnums[i]; // validamos la combinación
                     else {
-                        CombinacionValida=false;
+                        CombinacionValida = false;
                         return;
                     }
                 }
                 else
                 {
-                    CombinacionValida=false;     // La combinación no es válida, terminamos
+                    CombinacionValida = false;     // La combinación no es válida, terminamos
                     return;
                 }
-	    CombinacionValida=true;
+            CombinacionValida = true;
         }
 
 
