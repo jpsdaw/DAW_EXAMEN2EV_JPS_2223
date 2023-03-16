@@ -15,7 +15,7 @@ namespace ExamenLoto
     {
         public Loteria miLoto, miGanadora;
         private TextBox[] combinacion = new TextBox[6]; // Estos arrays se usan para recorrer de manera más sencilla los controles
-        private TextBox[] ganadora = new TextBox[6];
+        private TextBox[] ganadora = new TextBox[6]; //
         public Examen2EVJPS2223()
         {
             InitializeComponent();
